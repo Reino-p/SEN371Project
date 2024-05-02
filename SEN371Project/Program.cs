@@ -16,7 +16,7 @@ namespace SEN371Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Portal());
+            Application.Run(new portalForm());
         }
     }
 }

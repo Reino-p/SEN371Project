@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SEN371Project
 {
-    public partial class Portal : Form
+    public partial class portalForm : Form
     {
-        public Portal()
+        public portalForm()
         {
             InitializeComponent();
         }
