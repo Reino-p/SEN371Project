@@ -48,14 +48,53 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\Client.cs" />
     <Compile Include="BusinessLogicLayer\Users.cs" />
-    <Compile Include="PresentationLayer\Form1.cs">
+    <Compile Include="PresentationLayer\clientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PresentationLayer\clientForm.Designer.cs">
+      <DependentUpon>clientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\contractMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\contractMaintenanceForm.Designer.cs">
+      <DependentUpon>contractMaintenanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\portalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\portalForm.Designer.cs">
+      <DependentUpon>portalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\serviceDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\serviceDepartmentForm.Designer.cs">
+      <DependentUpon>serviceDepartmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\clientForm.resx">
+      <DependentUpon>clientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\contractMaintenanceForm.resx">
+      <DependentUpon>contractMaintenanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\portalForm.resx">
+      <DependentUpon>portalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\serviceDepartmentForm.resx">
+      <DependentUpon>serviceDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
