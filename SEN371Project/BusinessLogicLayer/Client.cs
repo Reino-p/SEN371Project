@@ -27,21 +27,24 @@ namespace SEN371Project.BusinessLogicLayer
         }
 
         //methods
-        public string addClient()
+        public void addClient()
         { 
             //add client to repository
             //number validation on client number
+            //regex expression for number valifation ( @"^0\d{9}$" )
         }
 
         public string updateClient()
         {
             //update client in repository
             //number validation on client number
+            return "";
         }
 
         public string getClient()
         {
             //get client from repository
+            return "";
         }
     }
 }
