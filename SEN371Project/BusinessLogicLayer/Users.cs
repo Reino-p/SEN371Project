@@ -22,29 +22,5 @@ namespace SEN371Project.BusinessLogicLayer
             this.name = n;
             this.surname = s;
         }
-
-        //methods
-        public void createUser()
-        {
-            //enter user details into repository
-        }
-
-        public string getUser()
-        {
-            //return user details from repository
-            return "";
-        }
-
-        public string updateUser()
-        {
-            //update user details in the repository
-            return "";
-        }
-
-        public string deleteUser()
-        {
-            //remove the user details from repository
-            return "";
-        }
     }
 }

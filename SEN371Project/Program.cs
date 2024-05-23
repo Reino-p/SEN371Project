@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEN371Project.PresentationLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace SEN371Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new portalForm());
+            Application.Run(new loginForm());
         }
     }
 }

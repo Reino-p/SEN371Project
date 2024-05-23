@@ -1,5 +1,4 @@
-﻿using SEN371Project.PresentationLayer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SEN371Project
+namespace SEN371Project.PresentationLayer
 {
-    public partial class portalForm : Form
+    public partial class serviceDepartment : Form
     {
-        public portalForm()
+        public serviceDepartment()
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(loginForm_Paint);
@@ -40,48 +39,47 @@ namespace SEN371Project
             this.Invalidate();
         }
 
-        private void btn_CallCenter_Click(object sender, EventArgs e)
+        private void serviceDepartment_Load(object sender, EventArgs e)
         {
-            //call center
-            callCenter call = new callCenter();
-            call.Show();
+            //on form load
+
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            //back button
+            portalForm portal = new portalForm();
+            portal.Show();
             this.Hide();
         }
 
-        private void btn_ClientMaintenance_Click(object sender, EventArgs e)
+        private void btn_Search_Click(object sender, EventArgs e)
         {
-            //client maintenance
-            clientMaintenance client = new clientMaintenance();
-            client.Show();
-            this.Hide();
+            //search button
+
         }
 
-        private void btn_ContractMaintenance_Click(object sender, EventArgs e)
+        private void btn_escalate_Click(object sender, EventArgs e)
         {
-            //contract maintenance
-            contractMaintenance contract = new contractMaintenance();
-            contract.Show();
-            this.Hide();
+            //escalate button
+
         }
 
-        private void btn_ServiceDepartment_Click(object sender, EventArgs e)
+        private void btn_unassign_Click(object sender, EventArgs e)
         {
-            //service department
-            serviceDepartment service = new serviceDepartment();
-            service.Show();
-            this.Hide();
+            //unassign button
+
         }
 
-        private void btn_Logout_Click(object sender, EventArgs e)
+        private void btn_assign_Click(object sender, EventArgs e)
         {
-            //logout
-            loginForm login = new loginForm();
-            login.Show();
-            this.Hide();
+            //assign button
+
         }
 
-        private void portalForm_Load(object sender, EventArgs e)
+        private void btn_Resolve_Click(object sender, EventArgs e)
         {
+            //resolve job button
 
         }
     }
