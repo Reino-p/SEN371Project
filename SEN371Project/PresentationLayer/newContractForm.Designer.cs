@@ -1,6 +1,6 @@
 ﻿namespace SEN371Project.PresentationLayer
 {
-    partial class newContract
+    partial class newContractForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newContract));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newContractForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_EndDate = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_ID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Cost = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_StartDate = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.usernameTextbox = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txt_EndDate);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txt_ID);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txt_Cost);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_StartDate);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.usernameTextbox);
+            this.panel1.Controls.Add(this.txt_Name);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btn_cancel);
@@ -71,13 +71,32 @@
             this.panel1.Size = new System.Drawing.Size(738, 402);
             this.panel1.TabIndex = 16;
             // 
-            // textBox5
+            // txt_EndDate
             // 
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(376, 149);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(307, 20);
-            this.textBox5.TabIndex = 32;
+            this.txt_EndDate.ForeColor = System.Drawing.Color.Black;
+            this.txt_EndDate.Location = new System.Drawing.Point(376, 200);
+            this.txt_EndDate.Name = "txt_EndDate";
+            this.txt_EndDate.Size = new System.Drawing.Size(307, 20);
+            this.txt_EndDate.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(373, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "End Date:";
+            // 
+            // txt_ID
+            // 
+            this.txt_ID.ForeColor = System.Drawing.Color.Black;
+            this.txt_ID.Location = new System.Drawing.Point(376, 149);
+            this.txt_ID.Name = "txt_ID";
+            this.txt_ID.Size = new System.Drawing.Size(307, 20);
+            this.txt_ID.TabIndex = 32;
             // 
             // label7
             // 
@@ -90,13 +109,13 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "ID:";
             // 
-            // textBox2
+            // txt_Cost
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(34, 250);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(307, 20);
-            this.textBox2.TabIndex = 30;
+            this.txt_Cost.ForeColor = System.Drawing.Color.Black;
+            this.txt_Cost.Location = new System.Drawing.Point(34, 250);
+            this.txt_Cost.Name = "txt_Cost";
+            this.txt_Cost.Size = new System.Drawing.Size(307, 20);
+            this.txt_Cost.TabIndex = 30;
             // 
             // label4
             // 
@@ -109,13 +128,13 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Cost:";
             // 
-            // textBox1
+            // txt_StartDate
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(34, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 20);
-            this.textBox1.TabIndex = 28;
+            this.txt_StartDate.ForeColor = System.Drawing.Color.Black;
+            this.txt_StartDate.Location = new System.Drawing.Point(34, 200);
+            this.txt_StartDate.Name = "txt_StartDate";
+            this.txt_StartDate.Size = new System.Drawing.Size(307, 20);
+            this.txt_StartDate.TabIndex = 28;
             // 
             // label3
             // 
@@ -128,13 +147,13 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Start Date:";
             // 
-            // usernameTextbox
+            // txt_Name
             // 
-            this.usernameTextbox.ForeColor = System.Drawing.Color.Black;
-            this.usernameTextbox.Location = new System.Drawing.Point(34, 149);
-            this.usernameTextbox.Name = "usernameTextbox";
-            this.usernameTextbox.Size = new System.Drawing.Size(307, 20);
-            this.usernameTextbox.TabIndex = 26;
+            this.txt_Name.ForeColor = System.Drawing.Color.Black;
+            this.txt_Name.Location = new System.Drawing.Point(34, 149);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(307, 20);
+            this.txt_Name.TabIndex = 26;
             // 
             // label2
             // 
@@ -204,25 +223,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "New Contract";
             // 
-            // textBox3
-            // 
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(376, 200);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(307, 20);
-            this.textBox3.TabIndex = 34;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(373, 184);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "End Date:";
-            // 
             // newContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,20 +244,20 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Cost;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_StartDate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox usernameTextbox;
+        private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_Submit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_EndDate;
         private System.Windows.Forms.Label label5;
     }
 }

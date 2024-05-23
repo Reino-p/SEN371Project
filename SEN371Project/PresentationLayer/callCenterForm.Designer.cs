@@ -1,6 +1,6 @@
 ﻿namespace SEN371Project.PresentationLayer
 {
-    partial class callCenter
+    partial class callCenterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(callCenter));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(callCenterForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_decline = new System.Windows.Forms.Button();
-            this.callerIDTextBox = new System.Windows.Forms.TextBox();
-            this.incomingCallTextBox = new System.Windows.Forms.TextBox();
+            this.txt_callerID = new System.Windows.Forms.TextBox();
+            this.txt_incomingCall = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
@@ -45,8 +45,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btn_decline);
-            this.panel1.Controls.Add(this.callerIDTextBox);
-            this.panel1.Controls.Add(this.incomingCallTextBox);
+            this.panel1.Controls.Add(this.txt_callerID);
+            this.panel1.Controls.Add(this.txt_incomingCall);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btn_back);
@@ -70,22 +70,22 @@
             this.btn_decline.UseVisualStyleBackColor = false;
             this.btn_decline.Click += new System.EventHandler(this.btn_decline_Click);
             // 
-            // callerIDTextBox
+            // txt_callerID
             // 
-            this.callerIDTextBox.ForeColor = System.Drawing.Color.Black;
-            this.callerIDTextBox.Location = new System.Drawing.Point(180, 187);
-            this.callerIDTextBox.Name = "callerIDTextBox";
-            this.callerIDTextBox.Size = new System.Drawing.Size(395, 20);
-            this.callerIDTextBox.TabIndex = 15;
-            this.callerIDTextBox.UseSystemPasswordChar = true;
+            this.txt_callerID.ForeColor = System.Drawing.Color.Black;
+            this.txt_callerID.Location = new System.Drawing.Point(180, 187);
+            this.txt_callerID.Name = "txt_callerID";
+            this.txt_callerID.Size = new System.Drawing.Size(395, 20);
+            this.txt_callerID.TabIndex = 15;
+            this.txt_callerID.UseSystemPasswordChar = true;
             // 
-            // incomingCallTextBox
+            // txt_incomingCall
             // 
-            this.incomingCallTextBox.ForeColor = System.Drawing.Color.Black;
-            this.incomingCallTextBox.Location = new System.Drawing.Point(180, 127);
-            this.incomingCallTextBox.Name = "incomingCallTextBox";
-            this.incomingCallTextBox.Size = new System.Drawing.Size(395, 20);
-            this.incomingCallTextBox.TabIndex = 14;
+            this.txt_incomingCall.ForeColor = System.Drawing.Color.Black;
+            this.txt_incomingCall.Location = new System.Drawing.Point(180, 127);
+            this.txt_incomingCall.Name = "txt_incomingCall";
+            this.txt_incomingCall.Size = new System.Drawing.Size(395, 20);
+            this.txt_incomingCall.TabIndex = 14;
             // 
             // label3
             // 
@@ -145,7 +145,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Call Center";
             // 
-            // CallCenter
+            // callCenter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,7 +153,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CallCenter";
+            this.Name = "callCenter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CallCenter";
             this.Load += new System.EventHandler(this.CallCenter_Load);
@@ -170,8 +170,8 @@
         private System.Windows.Forms.Button btn_answer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_decline;
-        private System.Windows.Forms.TextBox callerIDTextBox;
-        private System.Windows.Forms.TextBox incomingCallTextBox;
+        private System.Windows.Forms.TextBox txt_callerID;
+        private System.Windows.Forms.TextBox txt_incomingCall;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
