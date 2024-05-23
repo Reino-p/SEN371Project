@@ -49,6 +49,7 @@
             this.Controls.Add(this.label1);
             this.Name = "clientForm";
             this.Text = "Client Maintenance";
+            this.Load += new System.EventHandler(this.clientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

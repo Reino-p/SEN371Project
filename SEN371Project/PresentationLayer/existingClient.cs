@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SEN371Project.PresentationLayer
 {
-    public partial class loginForm : Form
+    public partial class existingClient : Form
     {
-        public loginForm()
+        public existingClient()
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(loginForm_Paint);
@@ -39,42 +39,36 @@ namespace SEN371Project.PresentationLayer
             this.Invalidate();
         }
 
-        private void loginForm_Load(object sender, EventArgs e)
+        private void existingClient_Load(object sender, EventArgs e)
         {
             //on form load
 
         }
 
-        private void btn_Login_Click(object sender, EventArgs e)
+        private void btn_Search_Click(object sender, EventArgs e)
         {
-            //login button
+            //search button
 
         }
 
-        private void btn_Register_Click(object sender, EventArgs e)
+        private void btn_delete_Click(object sender, EventArgs e)
         {
-            //register button
+            //delete button
 
         }
 
-        private void btn_Bypass_Click(object sender, EventArgs e)
+        private void btn_update_Click(object sender, EventArgs e)
         {
-            //bypass button
-            portalForm portal = new portalForm();
-            portal.Show();
+            //update button
+
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            //back button
+            clientMaintenance client = new clientMaintenance();
+            client.Show();
             this.Hide();
-        }
-
-        private void check_Password_CheckedChanged(object sender, EventArgs e)
-        {
-            //show password checkbox
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            //panel
-            
         }
     }
 }

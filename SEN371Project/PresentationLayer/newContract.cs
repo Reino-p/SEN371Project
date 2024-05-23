@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SEN371Project.PresentationLayer
 {
-    public partial class loginForm : Form
+    public partial class newContract : Form
     {
-        public loginForm()
+        public newContract()
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(loginForm_Paint);
@@ -39,42 +39,30 @@ namespace SEN371Project.PresentationLayer
             this.Invalidate();
         }
 
-        private void loginForm_Load(object sender, EventArgs e)
+        private void newContract_Load(object sender, EventArgs e)
         {
             //on form load
 
         }
 
-        private void btn_Login_Click(object sender, EventArgs e)
+        private void btn_back_Click(object sender, EventArgs e)
         {
-            //login button
-
-        }
-
-        private void btn_Register_Click(object sender, EventArgs e)
-        {
-            //register button
-
-        }
-
-        private void btn_Bypass_Click(object sender, EventArgs e)
-        {
-            //bypass button
-            portalForm portal = new portalForm();
-            portal.Show();
+            //back button
+            contractMaintenance maint = new contractMaintenance();
+            maint.Show();
             this.Hide();
         }
 
-        private void check_Password_CheckedChanged(object sender, EventArgs e)
+        private void btn_cancel_Click(object sender, EventArgs e)
         {
-            //show password checkbox
+            //cancel button
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btn_Submit_Click(object sender, EventArgs e)
         {
-            //panel
-            
+            //submit button
+
         }
     }
 }

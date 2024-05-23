@@ -16,5 +16,10 @@ namespace SEN371Project.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void clientForm_Load(object sender, EventArgs e)
+        {
+            //on form load
+        }
     }
 }
