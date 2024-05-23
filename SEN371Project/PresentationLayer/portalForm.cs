@@ -43,7 +43,7 @@ namespace SEN371Project
         private void btn_CallCenter_Click(object sender, EventArgs e)
         {
             //call center
-            callCenter call = new callCenter();
+            callCenterForm call = new callCenterForm();
             call.Show();
             this.Hide();
         }
@@ -51,7 +51,7 @@ namespace SEN371Project
         private void btn_ClientMaintenance_Click(object sender, EventArgs e)
         {
             //client maintenance
-            clientMaintenance client = new clientMaintenance();
+            clientMaintenanceForm client = new clientMaintenanceForm();
             client.Show();
             this.Hide();
         }
@@ -59,7 +59,7 @@ namespace SEN371Project
         private void btn_ContractMaintenance_Click(object sender, EventArgs e)
         {
             //contract maintenance
-            contractMaintenance contract = new contractMaintenance();
+            contractMaintenanceForm contract = new contractMaintenanceForm();
             contract.Show();
             this.Hide();
         }
@@ -67,7 +67,7 @@ namespace SEN371Project
         private void btn_ServiceDepartment_Click(object sender, EventArgs e)
         {
             //service department
-            serviceDepartment service = new serviceDepartment();
+            serviceDepartmentForm service = new serviceDepartmentForm();
             service.Show();
             this.Hide();
         }

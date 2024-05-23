@@ -1,6 +1,6 @@
 ﻿namespace SEN371Project.PresentationLayer
 {
-    partial class existingClient
+    partial class existingClientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(existingClient));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(existingClientForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Location = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();

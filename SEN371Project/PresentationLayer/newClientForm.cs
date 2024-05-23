@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SEN371Project.PresentationLayer
 {
-    public partial class callCenter : Form
+    public partial class newClientForm : Form
     {
-        public callCenter()
+        public newClientForm()
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(loginForm_Paint);
@@ -39,36 +39,30 @@ namespace SEN371Project.PresentationLayer
             this.Invalidate();
         }
 
-        private void CallCenter_Load(object sender, EventArgs e)
+        private void newClient_Load(object sender, EventArgs e)
         {
             //on form load
 
         }
 
-        private void btn_answer_Click(object sender, EventArgs e)
-        {
-            //answer button
-            ongoingCall ongoing = new ongoingCall();
-            ongoing.Show();
-            this.Hide();
-        }
-
-        private void btn_decline_Click(object sender, EventArgs e)
-        {
-            //decline button
-            callDeclined decline = new callDeclined();
-            decline.Show();
-            this.Hide();
-        }
-
         private void btn_back_Click(object sender, EventArgs e)
         {
-            //back button
-            portalForm portal = new portalForm();
-            portal.Show();
+            //back buttom
+            clientMaintenanceForm client = new clientMaintenanceForm();
+            client.Show();
             this.Hide();
         }
 
-        
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            //cancel button
+
+        }
+
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            //submit button
+
+        }
     }
 }

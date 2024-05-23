@@ -49,35 +49,23 @@
     <Compile Include="BusinessLogicLayer\Client.cs" />
     <Compile Include="BusinessLogicLayer\ClientController.cs" />
     <Compile Include="BusinessLogicLayer\Users.cs" />
-    <Compile Include="PresentationLayer\callCenter.cs">
+    <Compile Include="PresentationLayer\callCenterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\callCenter.Designer.cs">
-      <DependentUpon>callCenter.cs</DependentUpon>
+    <Compile Include="PresentationLayer\callCenterForm.Designer.cs">
+      <DependentUpon>callCenterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\callDeclined.cs">
+    <Compile Include="PresentationLayer\callDeclinedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\callDeclined.Designer.cs">
-      <DependentUpon>callDeclined.cs</DependentUpon>
+    <Compile Include="PresentationLayer\callDeclinedForm.Designer.cs">
+      <DependentUpon>callDeclinedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\clientForm.cs">
+    <Compile Include="PresentationLayer\clientMaintenanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\clientForm.Designer.cs">
-      <DependentUpon>clientForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\clientMaintenance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\clientMaintenance.Designer.cs">
-      <DependentUpon>clientMaintenance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\contractMaintenance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\contractMaintenance.Designer.cs">
-      <DependentUpon>contractMaintenance.cs</DependentUpon>
+    <Compile Include="PresentationLayer\clientMaintenanceForm.Designer.cs">
+      <DependentUpon>clientMaintenanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\contractMaintenanceForm.cs">
       <SubType>Form</SubType>
@@ -85,17 +73,17 @@
     <Compile Include="PresentationLayer\contractMaintenanceForm.Designer.cs">
       <DependentUpon>contractMaintenanceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\existingClient.cs">
+    <Compile Include="PresentationLayer\existingClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\existingClient.Designer.cs">
-      <DependentUpon>existingClient.cs</DependentUpon>
+    <Compile Include="PresentationLayer\existingClientForm.Designer.cs">
+      <DependentUpon>existingClientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\existingContracts.cs">
+    <Compile Include="PresentationLayer\existingContractsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\existingContracts.Designer.cs">
-      <DependentUpon>existingContracts.cs</DependentUpon>
+    <Compile Include="PresentationLayer\existingContractsForm.Designer.cs">
+      <DependentUpon>existingContractsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\GradientPanel.cs">
       <SubType>Component</SubType>
@@ -106,35 +94,29 @@
     <Compile Include="PresentationLayer\loginForm.Designer.cs">
       <DependentUpon>loginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\newClient.cs">
+    <Compile Include="PresentationLayer\newClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\newClient.Designer.cs">
-      <DependentUpon>newClient.cs</DependentUpon>
+    <Compile Include="PresentationLayer\newClientForm.Designer.cs">
+      <DependentUpon>newClientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\newContract.cs">
+    <Compile Include="PresentationLayer\newContractForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\newContract.Designer.cs">
-      <DependentUpon>newContract.cs</DependentUpon>
+    <Compile Include="PresentationLayer\newContractForm.Designer.cs">
+      <DependentUpon>newContractForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ongoingCall.cs">
+    <Compile Include="PresentationLayer\ongoingCallForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ongoingCall.Designer.cs">
-      <DependentUpon>ongoingCall.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ongoingCallForm.Designer.cs">
+      <DependentUpon>ongoingCallForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\portalForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\portalForm.Designer.cs">
       <DependentUpon>portalForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\serviceDepartment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\serviceDepartment.Designer.cs">
-      <DependentUpon>serviceDepartment.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\serviceDepartmentForm.cs">
       <SubType>Form</SubType>
@@ -144,47 +126,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PresentationLayer\callCenter.resx">
-      <DependentUpon>callCenter.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\callCenterForm.resx">
+      <DependentUpon>callCenterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\callDeclined.resx">
-      <DependentUpon>callDeclined.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\callDeclinedForm.resx">
+      <DependentUpon>callDeclinedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\clientForm.resx">
-      <DependentUpon>clientForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\clientMaintenance.resx">
-      <DependentUpon>clientMaintenance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\contractMaintenance.resx">
-      <DependentUpon>contractMaintenance.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\clientMaintenanceForm.resx">
+      <DependentUpon>clientMaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\contractMaintenanceForm.resx">
       <DependentUpon>contractMaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\existingClient.resx">
-      <DependentUpon>existingClient.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\existingClientForm.resx">
+      <DependentUpon>existingClientForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\existingContracts.resx">
-      <DependentUpon>existingContracts.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\existingContractsForm.resx">
+      <DependentUpon>existingContractsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\newClient.resx">
-      <DependentUpon>newClient.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\newClientForm.resx">
+      <DependentUpon>newClientForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\newContract.resx">
-      <DependentUpon>newContract.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\newContractForm.resx">
+      <DependentUpon>newContractForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ongoingCall.resx">
-      <DependentUpon>ongoingCall.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ongoingCallForm.resx">
+      <DependentUpon>ongoingCallForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\portalForm.resx">
       <DependentUpon>portalForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\serviceDepartment.resx">
-      <DependentUpon>serviceDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\serviceDepartmentForm.resx">
       <DependentUpon>serviceDepartmentForm.cs</DependentUpon>

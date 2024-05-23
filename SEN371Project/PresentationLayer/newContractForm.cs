@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SEN371Project.PresentationLayer
 {
-    public partial class contractMaintenance : Form
+    public partial class newContractForm : Form
     {
-        public contractMaintenance()
+        public newContractForm()
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(loginForm_Paint);
@@ -39,34 +39,30 @@ namespace SEN371Project.PresentationLayer
             this.Invalidate();
         }
 
-        private void contractMaintenance_Load(object sender, EventArgs e)
+        private void newContract_Load(object sender, EventArgs e)
         {
             //on form load
 
         }
 
-        private void btn_NewContract_Click(object sender, EventArgs e)
-        {
-            //new contract button
-            newContract newcontract = new newContract();
-            newcontract.Show();
-            this.Hide();
-        }
-
-        private void btn_ExistingContracts_Click(object sender, EventArgs e)
-        {
-            //existing contracts
-            existingContracts existing = new existingContracts();
-            existing.Show();
-            this.Hide();
-        }
-
         private void btn_back_Click(object sender, EventArgs e)
         {
             //back button
-            portalForm portal = new portalForm();
-            portal.Show();
+            contractMaintenanceForm maint = new contractMaintenanceForm();
+            maint.Show();
             this.Hide();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            //cancel button
+
+        }
+
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            //submit button
+
         }
     }
 }

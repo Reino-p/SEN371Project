@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SEN371Project.PresentationLayer
 {
-    public partial class serviceDepartment : Form
+    public partial class existingContractsForm : Form
     {
-        public serviceDepartment()
+        public existingContractsForm()
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(loginForm_Paint);
@@ -39,7 +39,7 @@ namespace SEN371Project.PresentationLayer
             this.Invalidate();
         }
 
-        private void serviceDepartment_Load(object sender, EventArgs e)
+        private void existingContracts_Load(object sender, EventArgs e)
         {
             //on form load
 
@@ -48,38 +48,26 @@ namespace SEN371Project.PresentationLayer
         private void btn_back_Click(object sender, EventArgs e)
         {
             //back button
-            portalForm portal = new portalForm();
-            portal.Show();
+            contractMaintenanceForm contract = new contractMaintenanceForm();
+            contract.Show();
             this.Hide();
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            //delete button
+
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            //update button
+
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
             //search button
-
-        }
-
-        private void btn_escalate_Click(object sender, EventArgs e)
-        {
-            //escalate button
-
-        }
-
-        private void btn_unassign_Click(object sender, EventArgs e)
-        {
-            //unassign button
-
-        }
-
-        private void btn_assign_Click(object sender, EventArgs e)
-        {
-            //assign button
-
-        }
-
-        private void btn_Resolve_Click(object sender, EventArgs e)
-        {
-            //resolve job button
 
         }
     }

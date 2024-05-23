@@ -1,6 +1,6 @@
 ﻿namespace SEN371Project.PresentationLayer
 {
-    partial class existingContracts
+    partial class existingContractsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(existingContracts));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(existingContractsForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_ContractID = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_Location = new System.Windows.Forms.TextBox();
+            this.txt_StartDate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_ContractID = new System.Windows.Forms.TextBox();
+            this.txt_EndDate = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_Number = new System.Windows.Forms.TextBox();
+            this.txt_ID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,18 +57,18 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_ContractID);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btn_Search);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txt_search);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txt_Location);
+            this.panel1.Controls.Add(this.txt_StartDate);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txt_ContractID);
+            this.panel1.Controls.Add(this.txt_EndDate);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txt_Number);
+            this.panel1.Controls.Add(this.txt_ID);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txt_Name);
             this.panel1.Controls.Add(this.label2);
@@ -81,6 +81,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(738, 402);
             this.panel1.TabIndex = 17;
+            // 
+            // txt_ContractID
+            // 
+            this.txt_ContractID.ForeColor = System.Drawing.Color.Black;
+            this.txt_ContractID.Location = new System.Drawing.Point(378, 312);
+            this.txt_ContractID.Name = "txt_ContractID";
+            this.txt_ContractID.Size = new System.Drawing.Size(307, 20);
+            this.txt_ContractID.TabIndex = 39;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(375, 296);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Contract ID:";
             // 
             // btn_Search
             // 
@@ -134,13 +153,13 @@
             this.label5.TabIndex = 33;
             this.label5.Text = "Contracts:";
             // 
-            // txt_Location
+            // txt_StartDate
             // 
-            this.txt_Location.ForeColor = System.Drawing.Color.Black;
-            this.txt_Location.Location = new System.Drawing.Point(378, 199);
-            this.txt_Location.Name = "txt_Location";
-            this.txt_Location.Size = new System.Drawing.Size(307, 20);
-            this.txt_Location.TabIndex = 32;
+            this.txt_StartDate.ForeColor = System.Drawing.Color.Black;
+            this.txt_StartDate.Location = new System.Drawing.Point(378, 199);
+            this.txt_StartDate.Name = "txt_StartDate";
+            this.txt_StartDate.Size = new System.Drawing.Size(307, 20);
+            this.txt_StartDate.TabIndex = 32;
             // 
             // label7
             // 
@@ -153,13 +172,13 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "Start Date:";
             // 
-            // txt_ContractID
+            // txt_EndDate
             // 
-            this.txt_ContractID.ForeColor = System.Drawing.Color.Black;
-            this.txt_ContractID.Location = new System.Drawing.Point(378, 257);
-            this.txt_ContractID.Name = "txt_ContractID";
-            this.txt_ContractID.Size = new System.Drawing.Size(307, 20);
-            this.txt_ContractID.TabIndex = 30;
+            this.txt_EndDate.ForeColor = System.Drawing.Color.Black;
+            this.txt_EndDate.Location = new System.Drawing.Point(378, 257);
+            this.txt_EndDate.Name = "txt_EndDate";
+            this.txt_EndDate.Size = new System.Drawing.Size(307, 20);
+            this.txt_EndDate.TabIndex = 30;
             // 
             // label4
             // 
@@ -172,13 +191,13 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "End Date:";
             // 
-            // txt_Number
+            // txt_ID
             // 
-            this.txt_Number.ForeColor = System.Drawing.Color.Black;
-            this.txt_Number.Location = new System.Drawing.Point(378, 138);
-            this.txt_Number.Name = "txt_Number";
-            this.txt_Number.Size = new System.Drawing.Size(307, 20);
-            this.txt_Number.TabIndex = 28;
+            this.txt_ID.ForeColor = System.Drawing.Color.Black;
+            this.txt_ID.Location = new System.Drawing.Point(378, 138);
+            this.txt_ID.Name = "txt_ID";
+            this.txt_ID.Size = new System.Drawing.Size(307, 20);
+            this.txt_ID.TabIndex = 28;
             // 
             // label3
             // 
@@ -267,25 +286,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Existing Contracts";
             // 
-            // textBox1
-            // 
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(378, 312);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 20);
-            this.textBox1.TabIndex = 39;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(375, 296);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 13);
-            this.label8.TabIndex = 38;
-            this.label8.Text = "Contract ID:";
-            // 
             // existingContracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,11 +313,11 @@
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_Location;
+        private System.Windows.Forms.TextBox txt_StartDate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_ContractID;
+        private System.Windows.Forms.TextBox txt_EndDate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_Number;
+        private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label2;
@@ -326,7 +326,7 @@
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_ContractID;
         private System.Windows.Forms.Label label8;
     }
 }
