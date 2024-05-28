@@ -49,6 +49,7 @@
     <Compile Include="BusinessLogicLayer\Client.cs" />
     <Compile Include="BusinessLogicLayer\ClientController.cs" />
     <Compile Include="BusinessLogicLayer\Users.cs" />
+    <Compile Include="DataHandler.cs" />
     <Compile Include="PresentationLayer\callCenterForm.cs">
       <SubType>Form</SubType>
     </Compile>

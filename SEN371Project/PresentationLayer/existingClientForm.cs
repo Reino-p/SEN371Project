@@ -13,6 +13,7 @@ namespace SEN371Project.PresentationLayer
 {
     public partial class existingClientForm : Form
     {
+        DataHandler dataHandler = new DataHandler();
         public existingClientForm()
         {
             InitializeComponent();
@@ -48,6 +49,9 @@ namespace SEN371Project.PresentationLayer
         private void btn_Search_Click(object sender, EventArgs e)
         {
             //search button
+
+            dataGridView1.DataSource = dataHandler.searchClient(txt_search.Text);
+
 
         }
 
