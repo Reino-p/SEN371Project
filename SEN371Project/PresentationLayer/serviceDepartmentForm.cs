@@ -65,47 +65,11 @@ namespace SEN371Project.PresentationLayer
             
         }
 
-        private void btn_SRStatus_Click(object sender, EventArgs e)
-        {
-            //Status Update button
-            try
-            {
-                dataHandler.updateServiceRequestStatus(txt_SpecifyServiceRequest.Text, int.Parse(cb_ServiceRequests.Text));
-                MessageBox.Show("Service Request Status Updated Succesfully");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please check that you have provided a status in the dropdown list");
-
-            }
-            dataGridView_Incidents.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
-        }
-
-        private void btn_SRDelete_Click(object sender, EventArgs e)
-        {
-            //delete sr button
-            DataTable dt = new DataTable();
-            dt = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
-
-            if (dt.Rows.Count == 0)
-            {
-                MessageBox.Show("Service Request has already been deleted or doesn't exist");
-            }
-            else
-            {
-                try
-                {
-                    dataHandler.deleteServiceRequest(txt_SpecifyServiceRequest.Text);
-                    MessageBox.Show("Service Request has been successfully deleted");
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("ERROR: Cant complete deletion");
-                }
-            }
-            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
-        }
-
+        /////////////////////////////////////////////
+        //                                         //
+        //----------- Incidents Section -----------//
+        //                                         //
+        /////////////////////////////////////////////
         private void btn_INDelete_Click(object sender, EventArgs e)
         {
             //delete in button
@@ -133,7 +97,7 @@ namespace SEN371Project.PresentationLayer
 
         private void btn_INUpdateStatus_Click(object sender, EventArgs e)
         {
-            
+            // Update Status Button
             try
             {
                 dataHandler.updateIncidentStatus(txt_SpecifyIncident.Text,int.Parse(cb_Incidents.Text));
@@ -146,7 +110,146 @@ namespace SEN371Project.PresentationLayer
             }
             dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
         }
+        private void btn_INassign_Click(object sender, EventArgs e)
+        {
+            // Update Assignee Button
+            try
+            {
+                dataHandler.updateIncidentAssignee(txt_SpecifyIncident.Text, int.Parse(cb_INAgents.Text));
+                MessageBox.Show("Incident Agent Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided an Assignee from the dropdown list");
 
-       
+            }
+            dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
+        }
+
+        private void btn_INUpdatePriority_Click(object sender, EventArgs e)
+        {
+            // Update Priority Button
+            try
+            {
+                dataHandler.updateIncidentPriority(txt_SpecifyIncident.Text, int.Parse(cb_INPriority.Text));
+                MessageBox.Show("Incident Priority Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided a status in the dropdown list");
+
+            }
+            dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
+        }
+
+        private void btn_INUpdateResDate_Click(object sender, EventArgs e)
+        {
+            // Update ResolutionDate Button
+            try
+            {
+                dataHandler.updateIncidentResolutionDate(txt_SpecifyIncident.Text, dtp_INResDate.Value.ToString("yyyy/MM/dd"));
+                MessageBox.Show("Incident Resolution Date Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have selected an appropriate Date on the Date Picker");
+
+            }
+            dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
+        }
+
+
+        /////////////////////////////////////////////
+        //                                         //
+        //------- Service Requests Section --------//
+        //                                         //
+        /////////////////////////////////////////////
+        private void btn_SRDelete_Click(object sender, EventArgs e)
+        {
+            //delete sr button
+            DataTable dt = new DataTable();
+            dt = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Service Request has already been deleted or doesn't exist");
+            }
+            else
+            {
+                try
+                {
+                    dataHandler.deleteServiceRequest(txt_SpecifyServiceRequest.Text);
+                    MessageBox.Show("Service Request has been successfully deleted");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("ERROR: Cant complete deletion");
+                }
+            }
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
+        }
+        private void btn_SRStatus_Click(object sender, EventArgs e)
+        {
+            //Status Update button
+            try
+            {
+                dataHandler.updateServiceRequestStatus(txt_SpecifyServiceRequest.Text, int.Parse(cb_ServiceRequests.Text));
+                MessageBox.Show("Service Request Status Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided a status in the dropdown list");
+
+            }
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
+        }
+
+        private void btn_SRassign_Click(object sender, EventArgs e)
+        {
+            // Update Assignee Button
+            try
+            {
+                dataHandler.updateServiceRequestAssignee(txt_SpecifyServiceRequest.Text, int.Parse(cb_SRAgents.Text));
+                MessageBox.Show("Service Request Agent Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided an Assignee from the dropdown list");
+
+            }
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
+        }
+
+        private void btn_SRUpdatePriority_Click(object sender, EventArgs e)
+        {
+            // Update Priority Button
+            try
+            {
+                dataHandler.updateServiceRequestPriority(txt_SpecifyServiceRequest.Text, int.Parse(cb_SRPriority.Text));
+                MessageBox.Show("Service Request Priority Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided a Priority in the dropdown list");
+
+            }
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
+        }
+
+        private void btn_SRUpdateResDate_Click(object sender, EventArgs e)
+        {
+            // Update ResolutionDate Button
+            try
+            {
+                dataHandler.updateServiceRequestResolutionDate(txt_SpecifyServiceRequest.Text, dtp_SRResDate.Value.ToString("yyyy/MM/dd"));
+                MessageBox.Show("Service Request Resolution Date Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have selected an appropriate Date on the Date Picker");
+
+            }
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
+        }
     }
 }

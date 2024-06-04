@@ -238,10 +238,49 @@ namespace SEN371Project
         {
             using (SqlConnection con = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("sp_UpdateIncidentStatus", con);
+                SqlCommand cmd = new SqlCommand("sp_UpdateServiceRequestStatus", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@RequestNumber", RequestNumber);
                 cmd.Parameters.AddWithValue("@TicketStatusID", TicketStatusID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        //Method using Stored Procedure to UPDATE ServiceRequests Priority sp_UpdateServiceRequestPriority
+        public void updateServiceRequestPriority(string RequestNumber, int PriorityID)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_UpdateServiceRequestPriority", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@RequestNumber", RequestNumber);
+                cmd.Parameters.AddWithValue("@PriorityID", PriorityID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        //Method using Stored Procedure to UPDATE ServiceRequests Assignee sp_UpdateServiceRequestAssignee
+        public void updateServiceRequestAssignee(string RequestNumber, int AgentID)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_UpdateServiceRequestAssignee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@RequestNumber", RequestNumber);
+                cmd.Parameters.AddWithValue("@AgentID", AgentID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        //Method using Stored Procedure to UPDATE ServiceRequests ResolutionDate sp_UpdateServiceRequestResolutionDate
+        public void updateServiceRequestResolutionDate(string RequestNumber, string ResolutionDate)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_UpdateServiceRequestResolutionDate", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@RequestNumber", RequestNumber);
+                cmd.Parameters.AddWithValue("@ResolutionDate", ResolutionDate);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -305,6 +344,45 @@ namespace SEN371Project
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IncidentNumber", IncidentNumber);
                 cmd.Parameters.AddWithValue("@TicketStatusID", TicketStatusID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        //Method using Stored Procedure to UPDATE Incidents Priority sp_UpdateIncidentPriority
+        public void updateIncidentPriority(string IncidentNumber, int PriorityID)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_UpdateIncidentPriority", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IncidentNumber", IncidentNumber);
+                cmd.Parameters.AddWithValue("@PriorityID", PriorityID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        //Method using Stored Procedure to UPDATE Incidents Assignee sp_UpdateIncidentAssignee
+        public void updateIncidentAssignee(string IncidentNumber, int AgentID)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_UpdateIncidentAssignee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IncidentNumber", IncidentNumber);
+                cmd.Parameters.AddWithValue("@AgentID", AgentID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        //Method using Stored Procedure to UPDATE Incidents ResolutionDate sp_UpdateIncidentResolutionDate
+        public void updateIncidentResolutionDate(string IncidentNumber, string ResolutionDate)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_UpdateIncidentResolutionDate", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IncidentNumber", IncidentNumber);
+                cmd.Parameters.AddWithValue("@ResolutionDate", ResolutionDate);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
