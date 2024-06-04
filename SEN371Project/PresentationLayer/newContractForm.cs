@@ -13,6 +13,7 @@ namespace SEN371Project.PresentationLayer
 {
     public partial class newContractForm : Form
     {
+        DataHandler dataHandler = new DataHandler();
         public newContractForm()
         {
             InitializeComponent();
@@ -56,13 +57,26 @@ namespace SEN371Project.PresentationLayer
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             //cancel button
-
+            contractMaintenanceForm maint = new contractMaintenanceForm();
+            maint.Show();
+            this.Hide();
         }
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             //submit button
+            DataTable dt = new DataTable();
+            dt = dataHandler.searchContracts(txt_Name.Text);
 
+            if (dt.Rows.Count == 0)
+            {
+                dataHandler.createContract(txt_Name.Text, dtpStartDate.Value.ToString("yyyy/MM/dd"), dtpEndDate.Value.ToString("yyyy/MM/dd"), float.Parse(txt_ContractCost.Text));
+                MessageBox.Show("New Contract Created Succesfully");
+            }
+            else
+            {
+                MessageBox.Show("Contract record already exists");
+            }
         }
     }
 }

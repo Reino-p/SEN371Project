@@ -42,14 +42,14 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_ContractID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cb_ContractID);
             this.panel1.Controls.Add(this.txt_Location);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txt_Number);
@@ -205,16 +205,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "New Client";
             // 
-            // comboBox1
+            // cb_ContractID
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_ContractID.FormattingEnabled = true;
+            this.cb_ContractID.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.comboBox1.Location = new System.Drawing.Point(44, 270);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(408, 24);
-            this.comboBox1.TabIndex = 33;
+            this.cb_ContractID.Location = new System.Drawing.Point(44, 270);
+            this.cb_ContractID.Name = "cb_ContractID";
+            this.cb_ContractID.Size = new System.Drawing.Size(408, 24);
+            this.cb_ContractID.TabIndex = 33;
             // 
             // newClientForm
             // 
@@ -250,6 +250,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_ContractID;
     }
 }

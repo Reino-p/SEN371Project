@@ -43,7 +43,7 @@ namespace SEN371Project.PresentationLayer
         private void existingClient_Load(object sender, EventArgs e)
         {
             //on form load
-
+            dataGridView1.DataSource = dataHandler.getClientDetails();
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
@@ -58,13 +58,46 @@ namespace SEN371Project.PresentationLayer
         private void btn_delete_Click(object sender, EventArgs e)
         {
             //delete button
+            DataTable dt = new DataTable();
+            dt = dataHandler.searchClient(txt_Name.Text);
 
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Record has already been deleted or doesn't exist");
+
+            }
+            else
+            {
+                try
+                {
+                    dataHandler.deleteClient(txt_Name.Text);
+                    MessageBox.Show("Record has been successfully deleted");
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("ERROR: Client has Tickets logged on the system");
+                }
+                
+
+            }
+            dataGridView1.DataSource = dataHandler.searchClient(txt_Name.Text);
         }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
             //update button
+            try
+            {
+                dataHandler.updateClientDetails(txt_Name.Text, txt_Number.Text, txt_Location.Text, int.Parse(cb_ContractID.Text));
+                MessageBox.Show("Client Update Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided all the values");
 
+            }
+            dataGridView1.DataSource = dataHandler.searchClient(txt_Name.Text);
         }
 
         private void btn_back_Click(object sender, EventArgs e)

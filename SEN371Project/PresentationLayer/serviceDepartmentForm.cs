@@ -13,6 +13,7 @@ namespace SEN371Project.PresentationLayer
 {
     public partial class serviceDepartmentForm : Form
     {
+        DataHandler dataHandler = new DataHandler();
         public serviceDepartmentForm()
         {
             InitializeComponent();
@@ -42,7 +43,9 @@ namespace SEN371Project.PresentationLayer
         private void serviceDepartment_Load(object sender, EventArgs e)
         {
             //on form load
-
+            dataGridView_Incidents.DataSource = dataHandler.getIncidentDetails();
+            dataGridView_ServiceRequests.DataSource = dataHandler.getServiceRequests();
+           
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -56,31 +59,94 @@ namespace SEN371Project.PresentationLayer
         private void btn_Search_Click(object sender, EventArgs e)
         {
             //search button
-
+            
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_Search.Text);
+            dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_Search.Text);
+            
         }
 
-        private void btn_escalate_Click(object sender, EventArgs e)
+        private void btn_SRStatus_Click(object sender, EventArgs e)
         {
-            //escalate button
+            //Status Update button
+            try
+            {
+                dataHandler.updateServiceRequestStatus(txt_SpecifyServiceRequest.Text, int.Parse(cb_ServiceRequests.Text));
+                MessageBox.Show("Service Request Status Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided a status in the dropdown list");
 
+            }
+            dataGridView_Incidents.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
         }
 
-        private void btn_unassign_Click(object sender, EventArgs e)
+        private void btn_SRDelete_Click(object sender, EventArgs e)
         {
-            //unassign button
+            //delete sr button
+            DataTable dt = new DataTable();
+            dt = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
 
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Service Request has already been deleted or doesn't exist");
+            }
+            else
+            {
+                try
+                {
+                    dataHandler.deleteServiceRequest(txt_SpecifyServiceRequest.Text);
+                    MessageBox.Show("Service Request has been successfully deleted");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("ERROR: Cant complete deletion");
+                }
+            }
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
         }
 
-        private void btn_assign_Click(object sender, EventArgs e)
+        private void btn_INDelete_Click(object sender, EventArgs e)
         {
-            //assign button
+            //delete in button
+            DataTable dt = new DataTable();
+            dt = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
 
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Incident has already been deleted or doesn't exist");
+            }
+            else
+            {
+                try
+                {
+                    dataHandler.deleteIncident(txt_SpecifyIncident.Text);
+                    MessageBox.Show("Incident has been successfully deleted");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("ERROR: Cant complete deletion");
+                }
+            }
+            dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
         }
 
-        private void btn_Resolve_Click(object sender, EventArgs e)
+        private void btn_INUpdateStatus_Click(object sender, EventArgs e)
         {
-            //resolve job button
+            
+            try
+            {
+                dataHandler.updateIncidentStatus(txt_SpecifyIncident.Text,int.Parse(cb_Incidents.Text));
+                MessageBox.Show("Incident Status Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided a status in the dropdown list");
 
+            }
+            dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
         }
+
+       
     }
 }

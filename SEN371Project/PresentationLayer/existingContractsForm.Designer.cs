@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(existingContractsForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.btn_Search = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
@@ -37,7 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_ID = new System.Windows.Forms.TextBox();
+            this.txt_ContractCost = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -55,8 +55,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtpEndDate);
+            this.panel1.Controls.Add(this.dtpStartDate);
             this.panel1.Controls.Add(this.btn_Search);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txt_search);
@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txt_ID);
+            this.panel1.Controls.Add(this.txt_ContractCost);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txt_Name);
             this.panel1.Controls.Add(this.label2);
@@ -74,10 +74,24 @@
             this.panel1.Controls.Add(this.btn_update);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(41, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 495);
             this.panel1.TabIndex = 17;
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Location = new System.Drawing.Point(504, 323);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(409, 22);
+            this.dtpEndDate.TabIndex = 39;
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.Location = new System.Drawing.Point(503, 245);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(409, 22);
+            this.dtpStartDate.TabIndex = 38;
             // 
             // btn_Search
             // 
@@ -85,7 +99,7 @@
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.Location = new System.Drawing.Point(297, 145);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(149, 31);
             this.btn_Search.TabIndex = 37;
@@ -109,7 +123,7 @@
             // 
             this.txt_search.ForeColor = System.Drawing.Color.Black;
             this.txt_search.Location = new System.Drawing.Point(49, 145);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_search.Multiline = true;
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(248, 30);
@@ -119,7 +133,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(49, 218);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(403, 202);
@@ -161,14 +175,14 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "End Date:";
             // 
-            // txt_ID
+            // txt_ContractCost
             // 
-            this.txt_ID.ForeColor = System.Drawing.Color.Black;
-            this.txt_ID.Location = new System.Drawing.Point(504, 170);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(408, 22);
-            this.txt_ID.TabIndex = 28;
+            this.txt_ContractCost.ForeColor = System.Drawing.Color.Black;
+            this.txt_ContractCost.Location = new System.Drawing.Point(504, 170);
+            this.txt_ContractCost.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ContractCost.Name = "txt_ContractCost";
+            this.txt_ContractCost.Size = new System.Drawing.Size(408, 22);
+            this.txt_ContractCost.TabIndex = 28;
             // 
             // label3
             // 
@@ -178,7 +192,7 @@
             this.label3.Location = new System.Drawing.Point(500, 150);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 21);
+            this.label3.Size = new System.Drawing.Size(45, 17);
             this.label3.TabIndex = 27;
             this.label3.Text = "Cost:";
             // 
@@ -186,7 +200,7 @@
             // 
             this.txt_Name.ForeColor = System.Drawing.Color.Black;
             this.txt_Name.Location = new System.Drawing.Point(504, 101);
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(408, 22);
             this.txt_Name.TabIndex = 26;
@@ -207,7 +221,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
             this.panel2.Location = new System.Drawing.Point(476, 128);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(3, 281);
             this.panel2.TabIndex = 24;
@@ -218,7 +232,7 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Location = new System.Drawing.Point(595, 441);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(149, 31);
             this.btn_delete.TabIndex = 13;
@@ -232,7 +246,7 @@
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.Location = new System.Drawing.Point(49, 18);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(135, 28);
             this.btn_back.TabIndex = 12;
@@ -246,7 +260,7 @@
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.Location = new System.Drawing.Point(764, 441);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(149, 31);
             this.btn_update.TabIndex = 8;
@@ -265,20 +279,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Existing Contracts";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(503, 245);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(409, 22);
-            this.dateTimePicker1.TabIndex = 38;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(504, 323);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(409, 22);
-            this.dateTimePicker2.TabIndex = 39;
-            // 
             // existingContractsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,7 +287,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "existingContractsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "existingContracts";
@@ -309,7 +309,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_ID;
+        private System.Windows.Forms.TextBox txt_ContractCost;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label2;
@@ -318,7 +318,7 @@
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
     }
 }
