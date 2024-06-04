@@ -119,7 +119,7 @@
             this.panel1.Location = new System.Drawing.Point(13, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1513, 775);
+            this.panel1.Size = new System.Drawing.Size(1525, 775);
             this.panel1.TabIndex = 17;
             // 
             // cb_INAgents
@@ -618,7 +618,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(1544, 828);
+            this.ClientSize = new System.Drawing.Size(1561, 828);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);

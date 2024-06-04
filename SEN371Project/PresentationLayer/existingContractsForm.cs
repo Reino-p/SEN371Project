@@ -68,7 +68,7 @@ namespace SEN371Project.PresentationLayer
             {
                 try
                 {
-                    dataHandler.deleteClient(txt_search.Text);
+                    dataHandler.deleteContract(txt_search.Text);
                     MessageBox.Show("Record has been successfully deleted");
                 }
                 catch (Exception)
@@ -76,7 +76,7 @@ namespace SEN371Project.PresentationLayer
                     MessageBox.Show("ERROR: Contract has matching Clients & Tickets logged on the system");
                 }
             }
-            dataGridView1.DataSource = dataHandler.searchClient(txt_search.Text);
+            dataGridView1.DataSource = dataHandler.searchContracts(txt_search.Text);
         }
 
         private void btn_update_Click(object sender, EventArgs e)
@@ -100,6 +100,14 @@ namespace SEN371Project.PresentationLayer
         {
             //search button
             dataGridView1.DataSource = dataHandler.searchContracts(txt_search.Text);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_Name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_ContractCost.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            dtpStartDate.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            dtpEndDate.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }
