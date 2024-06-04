@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEN371Project.BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -64,9 +65,56 @@ namespace SEN371Project
             };           
             return textbox;
         }
+        //Ticket Creation
+        //Service Request Creation
+        public void createServiceRequest(string RequestNumber, string RequestDescription, string ReportedDate, string ResolutionDate, int TicketStatusID, int SystemID, int PriorityID,int ClientID, int AgentID)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_InsertServiceRequest", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@RequestNumber", RequestNumber);
+                cmd.Parameters.AddWithValue("@RequestDescription", RequestDescription);
+                cmd.Parameters.AddWithValue("@ReportedDate", ReportedDate);
+                cmd.Parameters.AddWithValue("@ResolutionDate", ResolutionDate);
+                cmd.Parameters.AddWithValue("@TicketStatusID", TicketStatusID);
+                cmd.Parameters.AddWithValue("@SystemID", SystemID);
+                cmd.Parameters.AddWithValue("@PriorityID", PriorityID);               
+                cmd.Parameters.AddWithValue("@ClientID", ClientID);
+                cmd.Parameters.AddWithValue("@AgentID", AgentID);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        //Incident Creation
+        public void createIncident(string IncidentNumber, string IncidentDescription, string ReportedDate, string ResolutionDate, int TicketStatusID, int PriorityID, int SystemID, int AgentID, int ClientID)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_CreateIncident", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@RequestNumber", IncidentNumber);
+                cmd.Parameters.AddWithValue("@RequestDescription", IncidentDescription);
+                cmd.Parameters.AddWithValue("@ReportedDate", ReportedDate);
+                cmd.Parameters.AddWithValue("@ResolutionDate", ResolutionDate);
+                cmd.Parameters.AddWithValue("@TicketStatusID", TicketStatusID);
+                cmd.Parameters.AddWithValue("@PriorityID", PriorityID);
+                cmd.Parameters.AddWithValue("@SystemID", SystemID);
+                cmd.Parameters.AddWithValue("@AgentID", AgentID);
+                cmd.Parameters.AddWithValue("@ClientID", ClientID);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
 
         //Clients
-      
+
         //Method using Stored Procedure to update Client detials from newclientform 
         public void updateClientDetails(string ClientNumber, string ClientName, string ClientLocation, int ContractID )
         {
