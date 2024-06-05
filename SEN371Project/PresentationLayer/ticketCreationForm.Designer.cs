@@ -79,7 +79,7 @@
             // 
             // dtp_SRReportedDate
             // 
-            this.dtp_SRReportedDate.Location = new System.Drawing.Point(530, 666);
+            this.dtp_SRReportedDate.Location = new System.Drawing.Point(530, 685);
             this.dtp_SRReportedDate.Name = "dtp_SRReportedDate";
             this.dtp_SRReportedDate.Size = new System.Drawing.Size(221, 22);
             this.dtp_SRReportedDate.TabIndex = 75;
@@ -89,10 +89,10 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(552, 643);
+            this.label13.Location = new System.Drawing.Point(552, 659);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(205, 21);
+            this.label13.Size = new System.Drawing.Size(164, 17);
             this.label13.TabIndex = 74;
             this.label13.Text = "Select Reported Date";
             // 
@@ -105,7 +105,7 @@
             "3",
             "4",
             "5"});
-            this.cb_SRPriority.Location = new System.Drawing.Point(418, 664);
+            this.cb_SRPriority.Location = new System.Drawing.Point(417, 685);
             this.cb_SRPriority.Name = "cb_SRPriority";
             this.cb_SRPriority.Size = new System.Drawing.Size(106, 24);
             this.cb_SRPriority.TabIndex = 72;
@@ -115,7 +115,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(415, 646);
+            this.label14.Location = new System.Drawing.Point(417, 659);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(110, 17);
@@ -124,7 +124,7 @@
             // 
             // dtp_INReportedDate
             // 
-            this.dtp_INReportedDate.Location = new System.Drawing.Point(530, 366);
+            this.dtp_INReportedDate.Location = new System.Drawing.Point(530, 373);
             this.dtp_INReportedDate.Name = "dtp_INReportedDate";
             this.dtp_INReportedDate.Size = new System.Drawing.Size(221, 22);
             this.dtp_INReportedDate.TabIndex = 69;
@@ -137,7 +137,7 @@
             this.label12.Location = new System.Drawing.Point(552, 343);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(205, 21);
+            this.label12.Size = new System.Drawing.Size(164, 17);
             this.label12.TabIndex = 68;
             this.label12.Text = "Select Reported Date";
             // 
@@ -150,7 +150,7 @@
             "3",
             "4",
             "5"});
-            this.cb_INPriority.Location = new System.Drawing.Point(418, 367);
+            this.cb_INPriority.Location = new System.Drawing.Point(417, 373);
             this.cb_INPriority.Name = "cb_INPriority";
             this.cb_INPriority.Size = new System.Drawing.Size(106, 24);
             this.cb_INPriority.TabIndex = 66;
@@ -160,7 +160,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(415, 347);
+            this.label11.Location = new System.Drawing.Point(417, 343);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 17);
@@ -179,7 +179,7 @@
             "6",
             "7",
             "8"});
-            this.cb_INAgents.Location = new System.Drawing.Point(206, 370);
+            this.cb_INAgents.Location = new System.Drawing.Point(206, 373);
             this.cb_INAgents.Name = "cb_INAgents";
             this.cb_INAgents.Size = new System.Drawing.Size(97, 24);
             this.cb_INAgents.TabIndex = 63;
@@ -189,7 +189,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(203, 349);
+            this.label10.Location = new System.Drawing.Point(204, 343);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 17);
@@ -208,7 +208,7 @@
             "6",
             "7",
             "8"});
-            this.cb_SRAgents.Location = new System.Drawing.Point(206, 666);
+            this.cb_SRAgents.Location = new System.Drawing.Point(206, 685);
             this.cb_SRAgents.Name = "cb_SRAgents";
             this.cb_SRAgents.Size = new System.Drawing.Size(97, 24);
             this.cb_SRAgents.TabIndex = 61;
@@ -218,7 +218,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(203, 648);
+            this.label9.Location = new System.Drawing.Point(204, 659);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 17);
@@ -235,7 +235,7 @@
             "4",
             "5",
             "6"});
-            this.cb_ServiceRequests.Location = new System.Drawing.Point(310, 664);
+            this.cb_ServiceRequests.Location = new System.Drawing.Point(309, 685);
             this.cb_ServiceRequests.Name = "cb_ServiceRequests";
             this.cb_ServiceRequests.Size = new System.Drawing.Size(102, 24);
             this.cb_ServiceRequests.TabIndex = 59;
@@ -250,7 +250,7 @@
             "4",
             "5",
             "6"});
-            this.cb_Incidents.Location = new System.Drawing.Point(309, 367);
+            this.cb_Incidents.Location = new System.Drawing.Point(309, 373);
             this.cb_Incidents.Name = "cb_Incidents";
             this.cb_Incidents.Size = new System.Drawing.Size(101, 24);
             this.cb_Incidents.TabIndex = 58;
@@ -260,7 +260,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(307, 646);
+            this.label8.Location = new System.Drawing.Point(309, 659);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 17);
@@ -272,7 +272,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(306, 347);
+            this.label7.Location = new System.Drawing.Point(306, 343);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 17);
@@ -284,7 +284,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 648);
+            this.label6.Location = new System.Drawing.Point(25, 659);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 17);
@@ -294,7 +294,7 @@
             // txt_SpecifyServiceRequest
             // 
             this.txt_SpecifyServiceRequest.ForeColor = System.Drawing.Color.Black;
-            this.txt_SpecifyServiceRequest.Location = new System.Drawing.Point(23, 666);
+            this.txt_SpecifyServiceRequest.Location = new System.Drawing.Point(23, 685);
             this.txt_SpecifyServiceRequest.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SpecifyServiceRequest.Multiline = true;
             this.txt_SpecifyServiceRequest.Name = "txt_SpecifyServiceRequest";
@@ -306,7 +306,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 347);
+            this.label4.Location = new System.Drawing.Point(25, 343);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(140, 17);
@@ -316,7 +316,7 @@
             // txt_SpecifyIncident
             // 
             this.txt_SpecifyIncident.ForeColor = System.Drawing.Color.Black;
-            this.txt_SpecifyIncident.Location = new System.Drawing.Point(23, 369);
+            this.txt_SpecifyIncident.Location = new System.Drawing.Point(23, 373);
             this.txt_SpecifyIncident.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SpecifyIncident.Multiline = true;
             this.txt_SpecifyIncident.Name = "txt_SpecifyIncident";
@@ -328,7 +328,7 @@
             this.btn_INCreate.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_INCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_INCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_INCreate.Location = new System.Drawing.Point(1383, 346);
+            this.btn_INCreate.Location = new System.Drawing.Point(1383, 344);
             this.btn_INCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btn_INCreate.Name = "btn_INCreate";
             this.btn_INCreate.Size = new System.Drawing.Size(107, 53);
@@ -342,7 +342,7 @@
             this.btn_SRCreate.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_SRCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SRCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SRCreate.Location = new System.Drawing.Point(1383, 651);
+            this.btn_SRCreate.Location = new System.Drawing.Point(1383, 658);
             this.btn_SRCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SRCreate.Name = "btn_SRCreate";
             this.btn_SRCreate.Size = new System.Drawing.Size(107, 51);
@@ -401,7 +401,7 @@
             // dataGridView_ServiceRequests
             // 
             this.dataGridView_ServiceRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ServiceRequests.Location = new System.Drawing.Point(23, 448);
+            this.dataGridView_ServiceRequests.Location = new System.Drawing.Point(23, 461);
             this.dataGridView_ServiceRequests.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_ServiceRequests.Name = "dataGridView_ServiceRequests";
             this.dataGridView_ServiceRequests.RowHeadersWidth = 51;
@@ -423,7 +423,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 427);
+            this.label5.Location = new System.Drawing.Point(25, 440);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(227, 17);
@@ -511,17 +511,17 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(760, 645);
+            this.label15.Location = new System.Drawing.Point(804, 659);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(274, 21);
+            this.label15.Size = new System.Drawing.Size(219, 17);
             this.label15.TabIndex = 79;
             this.label15.Text = "Service Request Description:";
             // 
             // txt_ServiceRequestDescription
             // 
             this.txt_ServiceRequestDescription.ForeColor = System.Drawing.Color.Black;
-            this.txt_ServiceRequestDescription.Location = new System.Drawing.Point(758, 670);
+            this.txt_ServiceRequestDescription.Location = new System.Drawing.Point(758, 683);
             this.txt_ServiceRequestDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ServiceRequestDescription.Multiline = true;
             this.txt_ServiceRequestDescription.Name = "txt_ServiceRequestDescription";
@@ -533,17 +533,17 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(755, 344);
+            this.label16.Location = new System.Drawing.Point(837, 343);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(190, 21);
+            this.label16.Size = new System.Drawing.Size(152, 17);
             this.label16.TabIndex = 77;
             this.label16.Text = "Incident Description";
             // 
             // txt_IncidentDescription
             // 
             this.txt_IncidentDescription.ForeColor = System.Drawing.Color.Black;
-            this.txt_IncidentDescription.Location = new System.Drawing.Point(758, 366);
+            this.txt_IncidentDescription.Location = new System.Drawing.Point(758, 372);
             this.txt_IncidentDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IncidentDescription.Multiline = true;
             this.txt_IncidentDescription.Name = "txt_IncidentDescription";
@@ -559,9 +559,9 @@
             "3",
             "4",
             "5"});
-            this.cb_SRSystemID.Location = new System.Drawing.Point(1099, 671);
+            this.cb_SRSystemID.Location = new System.Drawing.Point(1099, 683);
             this.cb_SRSystemID.Name = "cb_SRSystemID";
-            this.cb_SRSystemID.Size = new System.Drawing.Size(106, 24);
+            this.cb_SRSystemID.Size = new System.Drawing.Size(122, 24);
             this.cb_SRSystemID.TabIndex = 83;
             // 
             // label17
@@ -569,7 +569,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.White;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1096, 644);
+            this.label17.Location = new System.Drawing.Point(1097, 659);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(125, 17);
@@ -585,9 +585,9 @@
             "3",
             "4",
             "5"});
-            this.cb_INSystemID.Location = new System.Drawing.Point(1099, 367);
+            this.cb_INSystemID.Location = new System.Drawing.Point(1099, 372);
             this.cb_INSystemID.Name = "cb_INSystemID";
-            this.cb_INSystemID.Size = new System.Drawing.Size(106, 24);
+            this.cb_INSystemID.Size = new System.Drawing.Size(122, 24);
             this.cb_INSystemID.TabIndex = 81;
             // 
             // label18
@@ -595,7 +595,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.White;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1096, 345);
+            this.label18.Location = new System.Drawing.Point(1096, 343);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(125, 17);
@@ -607,7 +607,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1227, 645);
+            this.label19.Location = new System.Drawing.Point(1230, 659);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(124, 17);
@@ -619,7 +619,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.White;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(1227, 346);
+            this.label20.Location = new System.Drawing.Point(1226, 343);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(124, 17);
@@ -629,7 +629,7 @@
             // txt_SRClientID
             // 
             this.txt_SRClientID.ForeColor = System.Drawing.Color.Black;
-            this.txt_SRClientID.Location = new System.Drawing.Point(1230, 664);
+            this.txt_SRClientID.Location = new System.Drawing.Point(1229, 683);
             this.txt_SRClientID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SRClientID.Multiline = true;
             this.txt_SRClientID.Name = "txt_SRClientID";
@@ -639,7 +639,7 @@
             // txt_INClientID
             // 
             this.txt_INClientID.ForeColor = System.Drawing.Color.Black;
-            this.txt_INClientID.Location = new System.Drawing.Point(1230, 367);
+            this.txt_INClientID.Location = new System.Drawing.Point(1229, 371);
             this.txt_INClientID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_INClientID.Multiline = true;
             this.txt_INClientID.Name = "txt_INClientID";

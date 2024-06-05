@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(existingClientForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb_ContractID = new System.Windows.Forms.ComboBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_ContractID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -74,10 +74,21 @@
             this.panel1.Controls.Add(this.btn_update);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(41, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 495);
             this.panel1.TabIndex = 16;
+            // 
+            // cb_ContractID
+            // 
+            this.cb_ContractID.FormattingEnabled = true;
+            this.cb_ContractID.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cb_ContractID.Location = new System.Drawing.Point(503, 396);
+            this.cb_ContractID.Name = "cb_ContractID";
+            this.cb_ContractID.Size = new System.Drawing.Size(409, 24);
+            this.cb_ContractID.TabIndex = 38;
             // 
             // btn_Search
             // 
@@ -85,7 +96,7 @@
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.Location = new System.Drawing.Point(531, 100);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(149, 31);
             this.btn_Search.TabIndex = 37;
@@ -109,7 +120,7 @@
             // 
             this.txt_search.ForeColor = System.Drawing.Color.Black;
             this.txt_search.Location = new System.Drawing.Point(283, 100);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_search.Multiline = true;
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(248, 30);
@@ -119,11 +130,12 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(49, 169);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(403, 251);
             this.dataGridView1.TabIndex = 34;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label5
             // 
@@ -141,7 +153,7 @@
             // 
             this.txt_Location.ForeColor = System.Drawing.Color.Black;
             this.txt_Location.Location = new System.Drawing.Point(504, 313);
-            this.txt_Location.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Location.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(408, 22);
             this.txt_Location.TabIndex = 32;
@@ -174,7 +186,7 @@
             // 
             this.txt_Number.ForeColor = System.Drawing.Color.Black;
             this.txt_Number.Location = new System.Drawing.Point(504, 238);
-            this.txt_Number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Number.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Number.Name = "txt_Number";
             this.txt_Number.Size = new System.Drawing.Size(408, 22);
             this.txt_Number.TabIndex = 28;
@@ -195,7 +207,7 @@
             // 
             this.txt_Name.ForeColor = System.Drawing.Color.Black;
             this.txt_Name.Location = new System.Drawing.Point(504, 169);
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(408, 22);
             this.txt_Name.TabIndex = 26;
@@ -216,7 +228,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
             this.panel2.Location = new System.Drawing.Point(476, 153);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(3, 281);
             this.panel2.TabIndex = 24;
@@ -227,7 +239,7 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Location = new System.Drawing.Point(595, 441);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(149, 31);
             this.btn_delete.TabIndex = 13;
@@ -241,7 +253,7 @@
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.Location = new System.Drawing.Point(49, 18);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(135, 28);
             this.btn_back.TabIndex = 12;
@@ -255,7 +267,7 @@
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.Location = new System.Drawing.Point(764, 441);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(149, 31);
             this.btn_update.TabIndex = 8;
@@ -274,17 +286,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Existing Client";
             // 
-            // cb_ContractID
-            // 
-            this.cb_ContractID.FormattingEnabled = true;
-            this.cb_ContractID.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cb_ContractID.Location = new System.Drawing.Point(503, 396);
-            this.cb_ContractID.Name = "cb_ContractID";
-            this.cb_ContractID.Size = new System.Drawing.Size(409, 24);
-            this.cb_ContractID.TabIndex = 38;
-            // 
             // existingClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,7 +294,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "existingClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "existingClient";

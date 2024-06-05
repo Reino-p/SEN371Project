@@ -251,5 +251,24 @@ namespace SEN371Project.PresentationLayer
             }
             dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
         }
+
+        private void dataGridView_Incidents_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_SpecifyIncident.Text = dataGridView_Incidents.CurrentRow.Cells[1].Value.ToString();
+            cb_INAgents.Text = dataGridView_Incidents.CurrentRow.Cells[8].Value.ToString();
+            cb_Incidents.Text = dataGridView_Incidents.CurrentRow.Cells[5].Value.ToString();
+            cb_INPriority.Text = dataGridView_Incidents.CurrentRow.Cells[6].Value.ToString();
+            dtp_INResDate.Text = dataGridView_Incidents.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        private void dataGridView_ServiceRequests_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_SpecifyServiceRequest.Text = dataGridView_ServiceRequests.CurrentRow.Cells[1].Value.ToString();
+            cb_SRAgents.Text = dataGridView_ServiceRequests.CurrentRow.Cells[9].Value.ToString();
+            cb_ServiceRequests.Text = dataGridView_ServiceRequests.CurrentRow.Cells[5].Value.ToString();
+            cb_SRPriority.Text = dataGridView_ServiceRequests.CurrentRow.Cells[7].Value.ToString();
+            dtp_SRResDate.Text = dataGridView_ServiceRequests.CurrentRow.Cells[4].Value.ToString();
+            
+        }
     }
 }

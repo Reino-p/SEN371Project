@@ -107,5 +107,13 @@ namespace SEN371Project.PresentationLayer
             client.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_Name.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txt_Number.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_Location.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            cb_ContractID.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+        }
     }
 }

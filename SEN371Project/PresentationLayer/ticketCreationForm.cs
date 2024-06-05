@@ -72,5 +72,7 @@ namespace SEN371Project.PresentationLayer
                 MessageBox.Show("ServiceRequest record already exists");
             }
         }
+
+       
     }
 }

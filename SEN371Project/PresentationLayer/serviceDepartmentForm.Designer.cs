@@ -405,6 +405,7 @@
             this.dataGridView_ServiceRequests.RowHeadersWidth = 51;
             this.dataGridView_ServiceRequests.Size = new System.Drawing.Size(1467, 194);
             this.dataGridView_ServiceRequests.TabIndex = 40;
+            this.dataGridView_ServiceRequests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ServiceRequests_CellClick);
             // 
             // dataGridView_Incidents
             // 
@@ -415,6 +416,7 @@
             this.dataGridView_Incidents.RowHeadersWidth = 51;
             this.dataGridView_Incidents.Size = new System.Drawing.Size(1467, 213);
             this.dataGridView_Incidents.TabIndex = 34;
+            this.dataGridView_Incidents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Incidents_CellClick);
             // 
             // label5
             // 
