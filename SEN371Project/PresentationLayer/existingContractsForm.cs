@@ -13,6 +13,7 @@ namespace SEN371Project.PresentationLayer
 {
     public partial class existingContractsForm : Form
     {
+        DataHandler dataHandler = new DataHandler();
         public existingContractsForm()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace SEN371Project.PresentationLayer
         private void existingContracts_Load(object sender, EventArgs e)
         {
             //on form load
-
+        dataGridView1.DataSource = dataHandler.getContractDetails();
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -56,19 +57,57 @@ namespace SEN371Project.PresentationLayer
         private void btn_delete_Click(object sender, EventArgs e)
         {
             //delete button
+            DataTable dt = new DataTable();
+            dt = dataHandler.searchContracts(txt_search.Text);
 
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Record has already been deleted or doesn't exist");
+            }
+            else
+            {
+                try
+                {
+                    dataHandler.deleteContract(txt_search.Text);
+                    MessageBox.Show("Record has been successfully deleted");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("ERROR: Contract has matching Clients & Tickets logged on the system");
+                }
+            }
+            dataGridView1.DataSource = dataHandler.searchContracts(txt_search.Text);
         }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
             //update button
+            try
+            {
+                dataHandler.updateContractDetails(txt_Name.Text, dtpStartDate.Value.ToString("yyyy/MM/dd"), dtpEndDate.Value.ToString("yyyy/MM/dd"), float.Parse(txt_ContractCost.Text));
+                MessageBox.Show("Contract Updated Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check that you have provided all the values");
 
+            }
+            dataGridView1.DataSource = dataHandler.searchContracts(txt_Name.Text);
         }
+    
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
             //search button
+            dataGridView1.DataSource = dataHandler.searchContracts(txt_search.Text);
+        }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_Name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_ContractCost.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            dtpStartDate.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            dtpEndDate.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }
