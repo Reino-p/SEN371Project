@@ -1,5 +1,4 @@
-﻿using SEN371Project.PresentationLayer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SEN371Project
+namespace SEN371Project.PresentationLayer
 {
-    public partial class portalForm : Form
+    public partial class ticketMaintenanceForm : Form
     {
-        public portalForm()
+        public ticketMaintenanceForm()
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(loginForm_Paint);
@@ -40,49 +39,34 @@ namespace SEN371Project
             this.Invalidate();
         }
 
-        private void btn_CallCenter_Click(object sender, EventArgs e)
+        private void ticketMaintenanceForm_Load(object sender, EventArgs e)
         {
-            //call center
-            callCenterForm call = new callCenterForm();
-            call.Show();
+            //on load
+
+        }
+
+        private void btn_NewTicket_Click(object sender, EventArgs e)
+        {
+            // new ticket btn
+            ticketCreationForm create = new ticketCreationForm();
+            create.Show();
             this.Hide();
         }
 
-        private void btn_ClientMaintenance_Click(object sender, EventArgs e)
+        private void btn_ExistingTickets_Click(object sender, EventArgs e)
         {
-            //client maintenance
-            clientMaintenanceForm client = new clientMaintenanceForm();
-            client.Show();
+            //existing ticket btn
+            serviceDepartmentForm service = new serviceDepartmentForm();
+            service.Show();
             this.Hide();
         }
 
-        private void btn_ContractMaintenance_Click(object sender, EventArgs e)
+        private void btn_back_Click(object sender, EventArgs e)
         {
-            //contract maintenance
-            contractMaintenanceForm contract = new contractMaintenanceForm();
-            contract.Show();
+            //back btn
+            portalForm portal = new portalForm();
+            portal.Show();
             this.Hide();
-        }
-
-        private void btn_ServiceDepartment_Click(object sender, EventArgs e)
-        {
-            //service department
-            ticketMaintenanceForm ticket = new ticketMaintenanceForm();
-            ticket.Show();
-            this.Hide();
-        }
-
-        private void btn_Logout_Click(object sender, EventArgs e)
-        {
-            //logout
-            loginForm login = new loginForm();
-            login.Show();
-            this.Hide();
-        }
-
-        private void portalForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

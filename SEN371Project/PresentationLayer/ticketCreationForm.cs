@@ -73,6 +73,12 @@ namespace SEN371Project.PresentationLayer
             }
         }
 
-       
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            // btn back
+            ticketMaintenanceForm ticket = new ticketMaintenanceForm();
+            ticket.Show();
+            this.Hide();
+        }
     }
 }

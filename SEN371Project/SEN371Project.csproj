@@ -88,6 +88,12 @@
     <Compile Include="PresentationLayer\existingContractsForm.Designer.cs">
       <DependentUpon>existingContractsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ticketMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ticketMaintenanceForm.Designer.cs">
+      <DependentUpon>ticketMaintenanceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\existingContractsForm.resx">
       <DependentUpon>existingContractsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ticketMaintenanceForm.resx">
+      <DependentUpon>ticketMaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
