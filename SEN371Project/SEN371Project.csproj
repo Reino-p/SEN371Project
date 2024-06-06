@@ -49,6 +49,9 @@
     <Compile Include="BusinessLogicLayer\Client.cs" />
     <Compile Include="BusinessLogicLayer\ClientController.cs" />
     <Compile Include="BusinessLogicLayer\Users.cs" />
+    <Compile Include="DataHandler.cs" />
+    <Compile Include="LoginClass.cs" />
+    <Compile Include="LoginDetails.cs" />
     <Compile Include="PresentationLayer\callCenterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +87,12 @@
     </Compile>
     <Compile Include="PresentationLayer\existingContractsForm.Designer.cs">
       <DependentUpon>existingContractsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ticketMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ticketMaintenanceForm.Designer.cs">
+      <DependentUpon>ticketMaintenanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\GradientPanel.cs">
       <SubType>Component</SubType>
@@ -124,6 +133,12 @@
     <Compile Include="PresentationLayer\serviceDepartmentForm.Designer.cs">
       <DependentUpon>serviceDepartmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ticketCreationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ticketCreationForm.Designer.cs">
+      <DependentUpon>ticketCreationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\callCenterForm.resx">
@@ -144,6 +159,9 @@
     <EmbeddedResource Include="PresentationLayer\existingContractsForm.resx">
       <DependentUpon>existingContractsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ticketMaintenanceForm.resx">
+      <DependentUpon>ticketMaintenanceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\serviceDepartmentForm.resx">
       <DependentUpon>serviceDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ticketCreationForm.resx">
+      <DependentUpon>ticketCreationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
