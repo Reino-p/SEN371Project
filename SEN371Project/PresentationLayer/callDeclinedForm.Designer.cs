@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_decline = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +40,6 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btn_decline);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(31, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(738, 402);
@@ -51,7 +49,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(264, 167);
+            this.label3.Location = new System.Drawing.Point(264, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 19);
             this.label3.TabIndex = 20;
@@ -62,7 +60,7 @@
             this.btn_decline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_decline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_decline.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_decline.Location = new System.Drawing.Point(268, 227);
+            this.btn_decline.Location = new System.Drawing.Point(268, 176);
             this.btn_decline.Name = "btn_decline";
             this.btn_decline.Size = new System.Drawing.Size(177, 35);
             this.btn_decline.TabIndex = 17;
@@ -70,17 +68,7 @@
             this.btn_decline.UseVisualStyleBackColor = false;
             this.btn_decline.Click += new System.EventHandler(this.btn_decline_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Call Details";
-            // 
-            // callDeclined
+            // callDeclinedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +76,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "callDeclined";
+            this.Name = "callDeclinedForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "callDeclined";
             this.Load += new System.EventHandler(this.callDeclined_Load);
@@ -103,6 +91,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_decline;
-        private System.Windows.Forms.Label label1;
     }
 }
