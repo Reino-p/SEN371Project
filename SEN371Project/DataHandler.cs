@@ -18,7 +18,7 @@ namespace SEN371Project
 
         }
 
-        string conn = "Server=RGOT-NB-01\\SQL2019;Database=pss_db_project2_sen371;Integrated Security=True;";
+        string conn = "Data Source=DESKTOP-SQAC0ML\\SQLEXPRESS; Initial Catalog=pss_db_project2_sen371; Integrated Security=True;";
 
         //Incidents
         public DataTable getIncidents()
