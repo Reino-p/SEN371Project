@@ -51,8 +51,8 @@ namespace SEN371Project.PresentationLayer
         private void btn_back_Click(object sender, EventArgs e)
         {
             //back button
-            portalForm portal = new portalForm();
-            portal.Show();
+            ticketMaintenanceForm ticket = new ticketMaintenanceForm();
+            ticket.Show();
             this.Hide();
         }
 
