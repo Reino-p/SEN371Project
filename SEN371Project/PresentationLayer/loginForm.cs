@@ -76,10 +76,8 @@ namespace SEN371Project.PresentationLayer
             {
 
                 if (InputUsername == LoginClass.Users[i].Username && InputPassword == LoginClass.Users[i].Password)
-
                 {
                     MessageBox.Show("Login Success. Press OK ");
-
                     new portalForm().Show();
                     this.Hide();
                     validation = true;

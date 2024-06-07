@@ -18,7 +18,7 @@ namespace SEN371Project
 
         }
 
-        string conn = "Data Source=DESKTOP-SQAC0ML\\SQLEXPRESS; Initial Catalog=pss_db_project2_sen371; Integrated Security=True;";
+        string conn = "Data Source=RGOT-NB-01\\SQL2019; Initial Catalog=pss_db_project2_sen371; Integrated Security=True;";
 
         //Incidents
         public DataTable getIncidents()
@@ -96,8 +96,8 @@ namespace SEN371Project
                 SqlCommand cmd = new SqlCommand("sp_CreateIncident", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@RequestNumber", IncidentNumber);
-                cmd.Parameters.AddWithValue("@RequestDescription", IncidentDescription);
+                cmd.Parameters.AddWithValue("@IncidentNumber", IncidentNumber);
+                cmd.Parameters.AddWithValue("@IncidentDescription", IncidentDescription);
                 cmd.Parameters.AddWithValue("@ReportedDate", ReportedDate);
                 cmd.Parameters.AddWithValue("@ResolutionDate", ResolutionDate);
                 cmd.Parameters.AddWithValue("@TicketStatusID", TicketStatusID);

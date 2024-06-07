@@ -53,7 +53,7 @@ namespace SEN371Project.PresentationLayer
             {
                 MessageBox.Show("Incident record already exists");
             }
-
+            dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
         }
 
         private void btn_SRCreate_Click(object sender, EventArgs e)
@@ -71,6 +71,7 @@ namespace SEN371Project.PresentationLayer
             {
                 MessageBox.Show("ServiceRequest record already exists");
             }
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -79,6 +80,18 @@ namespace SEN371Project.PresentationLayer
             ticketMaintenanceForm ticket = new ticketMaintenanceForm();
             ticket.Show();
             this.Hide();
+        }
+
+        private void ticketCreationForm_Load(object sender, EventArgs e)
+        {
+            dataGridView_Incidents.DataSource = dataHandler.getIncidentDetails();
+            dataGridView_ServiceRequests.DataSource = dataHandler.getServiceRequests();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_Search.Text);
+            dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_Search.Text);
         }
     }
 }
