@@ -51,12 +51,15 @@ namespace SEN371Project.PresentationLayer
         private void OngoingCall_Load(object sender, EventArgs e)
         {
             //on form load
+            elapsedTime = 0;
+            
             string value = callCenterForm.rando;
             label_CallerID.Text = value;
             if (!string.IsNullOrEmpty(callCenterForm.rando))
             {
                 timer1.Start(); // Start the timer only if rando has a value
             }
+
         }
 
         //private void btn_back_Click(object sender, EventArgs e)
@@ -70,6 +73,7 @@ namespace SEN371Project.PresentationLayer
         private void btn_decline_Click(object sender, EventArgs e)
         {
             //decline button
+            timer1.Stop();
             callCenterForm call = new callCenterForm();
             call.Show();
             this.Hide();

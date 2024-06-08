@@ -83,7 +83,7 @@ namespace SEN371Project.PresentationLayer
             char[] digits = new char[2];
             for (int i = 0; i < 2; i++)
             {
-                digits[i] = (char)('0' + random.Next(0, 10));
+                digits[i] = (char)('0' + random.Next(6, 9));
             }
             return new string(digits);
         }
@@ -124,7 +124,7 @@ namespace SEN371Project.PresentationLayer
             //on form load for names
             List<string> names = new List<string>
             {
-                "Alice", "Bob", "Charlie", "Diana", "Edward", "Fiona", "George", "Hannah", "Ivan", "Julia"
+                "Alice", "Bob", "Charlie", "Diana", "Edward", "Fiona", "George", "Hannah", "Ivan", "Julia", "Reon", "Reino", "Andre", "Tewis", "Elias", "Ajay", "Johan", "Lebogang", "Simba", "Mufasa", "Scar", "Zazu", "Nahla", "Kiara", "Zeus"
             };
             string randomName = GetRandomName(names);
             name = randomName;

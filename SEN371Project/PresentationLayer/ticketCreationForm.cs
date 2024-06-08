@@ -54,6 +54,9 @@ namespace SEN371Project.PresentationLayer
                 MessageBox.Show("Incident record already exists");
             }
             dataGridView_Incidents.DataSource = dataHandler.searchIncidents(txt_SpecifyIncident.Text);
+
+
+
         }
 
         private void btn_SRCreate_Click(object sender, EventArgs e)
@@ -72,6 +75,8 @@ namespace SEN371Project.PresentationLayer
                 MessageBox.Show("ServiceRequest record already exists");
             }
             dataGridView_ServiceRequests.DataSource = dataHandler.searchServiceRequests(txt_SpecifyServiceRequest.Text);
+
+
         }
 
         private void btn_back_Click(object sender, EventArgs e)
