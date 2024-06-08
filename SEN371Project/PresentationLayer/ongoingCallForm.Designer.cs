@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ongoingCallForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_decline = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,9 +71,9 @@
             this.label_Duration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Duration.Location = new System.Drawing.Point(297, 185);
             this.label_Duration.Name = "label_Duration";
-            this.label_Duration.Size = new System.Drawing.Size(103, 16);
+            this.label_Duration.Size = new System.Drawing.Size(44, 16);
             this.label_Duration.TabIndex = 22;
-            this.label_Duration.Text = "Placeholder text";
+            this.label_Duration.Text = "00 : 00";
             // 
             // label_CallerID
             // 
@@ -112,7 +114,7 @@
             this.btn_decline.Name = "btn_decline";
             this.btn_decline.Size = new System.Drawing.Size(99, 34);
             this.btn_decline.TabIndex = 17;
-            this.btn_decline.Text = "Decline";
+            this.btn_decline.Text = "End Call";
             this.btn_decline.UseVisualStyleBackColor = false;
             this.btn_decline.Click += new System.EventHandler(this.btn_decline_Click);
             // 
@@ -126,7 +128,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ongoing Call";
             // 
-            // ongoingCall
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ongoingCallForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +141,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ongoingCall";
+            this.Name = "ongoingCallForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OngoingCall";
             this.Load += new System.EventHandler(this.OngoingCall_Load);
@@ -154,5 +161,6 @@
         private System.Windows.Forms.Label label_CallerID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -39,10 +39,16 @@ namespace SEN371Project.PresentationLayer
             this.Invalidate();
         }
 
+        public static string rando { get; set; }
+        public Timer time;
+
         private void CallCenter_Load(object sender, EventArgs e)
         {
-            //on form load
-
+            //Form load
+            string num = "";
+            txt_incomingCall.Text = numbers(num);
+            rando = names("");
+            txt_callerID.Text = rando;
         }
 
         private void btn_answer_Click(object sender, EventArgs e)
@@ -51,6 +57,7 @@ namespace SEN371Project.PresentationLayer
             ongoingCallForm ongoing = new ongoingCallForm();
             ongoing.Show();
             this.Hide();
+
         }
 
         private void btn_decline_Click(object sender, EventArgs e)
@@ -69,6 +76,60 @@ namespace SEN371Project.PresentationLayer
             this.Hide();
         }
 
-        
+        private static Random random = new Random();
+
+        public static string GenerateRandom2DigitNumber()
+        {
+            char[] digits = new char[2];
+            for (int i = 0; i < 2; i++)
+            {
+                digits[i] = (char)('0' + random.Next(0, 10));
+            }
+            return new string(digits);
+        }
+
+        public static string GenerateRandom3DigitNumber()
+        {
+            char[] digits = new char[3];
+            for (int i = 0; i < 3; i++)
+            {
+                digits[i] = (char)('0' + random.Next(0, 10));
+            }
+            return new string(digits);
+        }
+
+        private static Random randomName = new Random();
+
+        public static string GetRandomName(List<string> names)
+        {
+            if (names == null || names.Count == 0)
+            {
+                throw new ArgumentException("The list of names cannot be null or empty");
+            }
+
+            int randomIndex = randomName.Next(names.Count);
+            return names[randomIndex];
+        }
+
+        public string numbers(string num) {
+            //on form load for numbers
+            string num1 = GenerateRandom2DigitNumber();
+            string num2 = GenerateRandom3DigitNumber();
+            string num3 = GenerateRandom3DigitNumber();
+            num = "+27 " + num1 + " " + num2 + " " + num3;
+            return num;
+        }
+
+        public string names(string name) {
+            //on form load for names
+            List<string> names = new List<string>
+            {
+                "Alice", "Bob", "Charlie", "Diana", "Edward", "Fiona", "George", "Hannah", "Ivan", "Julia"
+            };
+            string randomName = GetRandomName(names);
+            name = randomName;
+            return name;
+        }
+
     }
 }

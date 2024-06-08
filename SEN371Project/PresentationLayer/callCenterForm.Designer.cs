@@ -77,7 +77,6 @@
             this.txt_callerID.Name = "txt_callerID";
             this.txt_callerID.Size = new System.Drawing.Size(395, 20);
             this.txt_callerID.TabIndex = 15;
-            this.txt_callerID.UseSystemPasswordChar = true;
             // 
             // txt_incomingCall
             // 
@@ -145,7 +144,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Call Center";
             // 
-            // callCenter
+            // callCenterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,7 +152,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "callCenter";
+            this.Name = "callCenterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CallCenter";
             this.Load += new System.EventHandler(this.CallCenter_Load);
