@@ -18,7 +18,8 @@ namespace SEN371Project
 
         }
 
-        string conn = "Data Source=DESKTOP-SQAC0ML\\SQLEXPRESS; Initial Catalog=pss_db_project2_sen371; Integrated Security=True;";
+        //string conn = "Data Source=DESKTOP-SQAC0ML\\SQLEXPRESS; Initial Catalog=pss_db_project2_sen371; Integrated Security=True;";
+        string conn = "Data Source=RQT127\\SQLEXPRESS; Initial Catalog=pss_db_project2_sen371; Integrated Security=True;";
 
         //Incidents
         public DataTable getIncidents()

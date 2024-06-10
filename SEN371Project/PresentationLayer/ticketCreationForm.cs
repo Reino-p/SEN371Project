@@ -46,7 +46,18 @@ namespace SEN371Project.PresentationLayer
 
             if (dt.Rows.Count == 0)
             {
-                dataHandler.createIncident(txt_SpecifyIncident.Text ,txt_IncidentDescription.Text , dtp_INReportedDate.Value.ToString("yyyy/MM/dd"), " " , int.Parse(cb_Incidents.Text) , int.Parse(cb_INPriority.Text) , int.Parse(cb_INSystemID.Text), int.Parse(cb_INAgents.Text), int.Parse(txt_INClientID.Text));
+                dataHandler.createIncident(txt_SpecifyIncident.Text, txt_IncidentDescription.Text, dtp_INReportedDate.Value.ToString("yyyy/MM/dd"), " ", int.Parse(cb_Incidents.Text), int.Parse(cb_INPriority.Text), int.Parse(cb_INSystemID.Text), int.Parse(cb_INAgents.Text), int.Parse(txt_INClientID.Text));
+                string message = string.Format("New Ticket Created:\n" +
+                              "Ticket ID: {0}\n" +
+                              "Ticket Type: Incident\n" +
+                              "Date: {1}\n" +
+                              "Client ID: {2}\n" +
+                              "Priority: {3}",
+                              txt_SpecifyIncident.Text,
+                              dtp_INReportedDate.Value.ToString("yyyy/MM/dd"),
+                              txt_INClientID.Text,
+                              cb_INPriority.Text);
+                sendMessageAsync(message);
                 MessageBox.Show("Incident Record Created Succesfully");
             }
             else
@@ -65,6 +76,17 @@ namespace SEN371Project.PresentationLayer
             if (dt.Rows.Count == 0)
             {
                 dataHandler.createServiceRequest(txt_SpecifyServiceRequest.Text, txt_ServiceRequestDescription.Text, dtp_SRReportedDate.Value.ToString("yyyy/MM/dd"), " ", int.Parse(cb_ServiceRequests.Text), int.Parse(cb_SRPriority.Text), int.Parse(cb_SRSystemID.Text), int.Parse(cb_SRAgents.Text), int.Parse(txt_SRClientID.Text));
+                string message = string.Format("New Ticket Created:\n" +
+                   "Ticket ID: {0}\n" +
+                   "Ticket Type: Service Request\n" +
+                   "Date: {1}\n" +
+                   "Client ID: {2}\n" +
+                   "Priority: {3}",
+                   txt_SpecifyIncident.Text,
+                   dtp_INReportedDate.Value.ToString("yyyy/MM/dd"),
+                   txt_INClientID.Text,
+                   cb_INPriority.Text);
+                sendMessageAsync(message);
                 MessageBox.Show("ServiceRequest Record Created Succesfully");
             }
             else
@@ -79,6 +101,10 @@ namespace SEN371Project.PresentationLayer
             ticketMaintenanceForm ticket = new ticketMaintenanceForm();
             ticket.Show();
             this.Hide();
+        }
+        private async void sendMessageAsync(string message) 
+        {
+            bool sent = await SmsAPI.SendSMSAsync(message);
         }
     }
 }
